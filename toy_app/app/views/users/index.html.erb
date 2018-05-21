@@ -1,6 +1,7 @@
+<!--/users で開くよ！-->
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1>ユーザー一覧</h1>
 
 <table>
   <thead>
@@ -16,9 +17,9 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '開く', user %></td>
+        <td><%= link_to '編集', edit_user_path(user) %></td>
+        <td><%= link_to '削除', user, method: :delete, data: { confirm: '消してもいいですか?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to '新規', new_user_path %>
