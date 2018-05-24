@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang='ja' xml:lang='ja' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>Ruby on Rails チュートリアル：実例を使って Rails を学ぼう</title>
+    <meta name="apple-mobile-web-app-title" content="Rails Tutorial" />
+    <meta name="application-name"           content="Rails Tutorial" />
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"344f7aca68","applicationID":"3870367","transactionName":"dQxXQBFaDwpTF0sAW1cTTVERRkwPWAEBGw==","queueTime":0,"applicationTime":23,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta name="robots" content="all" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <meta name="title"       content="Ruby on Rails チュートリアル：実例を使って Rails を学ぼう" />
+    <meta name="description" content="SNSの開発を題材にした無料の大型チュートリアルで、ウェブサービスの開発から公開までの流れを実例を通して学べます。解説動画や質問対応サービスも提供しています。" />
+    <meta name="keywords"    content="Ruby Rails チュートリアル ウェブ Rails開発 入門" />
+    <meta name="author"      content="Michael Hartl" />
+    <link rel="author" type="text/plain" href="/humans.txt" />
+    <meta name="viewport" content="width=device-width,initial-scale1=1">
+
+    <meta property="fb:admins"      content="715330868" />
+    <meta property="fb:app_id"      content="144878509039953" />
+    <meta property="og:title"       content="Ruby on Rails チュートリアル：実例を使って Rails を学ぼう"/>
+    <meta property="og:site_name"   content="Ruby on Rails チュートリアル：実例を使って Rails を学ぼう"/>
+    <meta property="og:image"       content="http://railstutorial.jp/images/layout/logo.png"/>
+    <meta property="og:url"         content="http://railstutorial.jp/">
+    <meta property="og:type"        content="article" />
+    <meta property="og:description" content="SNSの開発を題材にした無料の大型チュートリアルで、ウェブサービスの開発から公開までの流れを実例を通して学べます。解説動画や質問対応サービスも提供しています。" />
+
+    <meta name="twitter:card"  content="summary" />
+    <meta name="twitter:site"  content="@RailsTutorialJP" />
+    <meta name="twitter:title" content="Ruby on Rails チュートリアル：実例を使って Rails を学ぼう" />
+    <meta name="twitter:description" content="SNSの開発を題材にした無料の大型チュートリアルで、ウェブサービスの開発から公開までの流れを実例を通して学べます。解説動画や質問対応サービスも提供しています。" />
+    <meta name="twitter:image" content="http://railstutorial.jp/images/layout/logo.png" />
+    <meta name="twitter:url"   content="http://railstutorial.jp/" />
+
+    <link rel="apple-touch-icon" sizes="57x57"   href="/images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"   href="/images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"   href="/images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"   href="/images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+
+    <link rel="manifest"  href="/manifest.json">
+    <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#6e0421">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="/assets/application-fdc297d5fe789cf50d44d4b5b6ee3b1f4ea9e54f4e86ca89650a3d3ba7b4ab1f.js"></script>
+
+      <link rel="stylesheet" media="all" href="/assets/5.1/application-5f212495099c7e2a544abd41c63e88d66dead0fab2804887e1ebbb7eeba66f50.css" />
+
+    <link rel="stylesheet" media="screen, projection" href="/assets/screen-37073bd85e9a0572ab09daa19972e2bce7636f360ed415dee497ccb801a2c0d6.css" />
+    <link rel="stylesheet" media="print" href="/assets/print-4c2a06b9d892cf06cd0c15e4c22e9351289583b1166c4d317d8cd592e78866c2.css" />
+    <link rel="stylesheet" media="screen, projection" href="/assets/social-e552f1f8160f4e73a01bfe2d868d9f91957968b24ac2a598de42abdad49de7ec.css" />
+    <!--[if lte IE 7]>
+      <link rel="stylesheet" media="screen" href="/assets/ie-1232fac3f4dcdce0b4cb1e7f792b26045f5e46119d622033b077d5c62d212ff0.css" />
+    <![endif]-->
+    <!--[if lt IE 7]>  <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>    <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>    <div style='width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>      <div style='width: 75px; float: left;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-warning.jpg' alt='Warning!'/></div>      <div style='width: 275px; float: left; font-family: Arial, sans-serif;'>        <div style='font-size: 14px; font-weight: bold; margin-top: 12px;'>You are using an outdated browser</div>        <div style='font-size: 12px; margin-top: 6px; line-height: 12px;'>For a better experience using this site, please upgrade to a modern web browser.</div>      </div>      <div style='width: 75px; float: left;'><a href='http://www.firefox.com' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-firefox.jpg' style='border: none;' alt='Get Firefox 3.5'/></a></div>      <div style='width: 75px; float: left;'><a href='http://www.browserforthebetter.com/download.html' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-ie8.jpg' style='border: none;' alt='Get Internet Explorer 8'/></a></div>      <div style='width: 73px; float: left;'><a href='http://www.apple.com/safari/download/' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-safari.jpg' style='border: none;' alt='Get Safari 4'/></a></div>      <div style='float: left;'><a href='http://www.google.com/chrome' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-chrome.jpg' style='border: none;' alt='Get Google Chrome'/></a></div>    </div>  </div>  <![endif]-->
+    <link href='http://feeds.feedburner.com/railstutorial' rel='alternate' title='Rails Tutorial News' type='application/rss+xml' />
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-42117937-1', 'railstutorial.jp');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- start Mixpanel -->
+    <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+      typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+        b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+  mixpanel.init("b978862108ac23f0b2ef9decccaea395");</script>
+    <!-- end Mixpanel -->
+    <script type="text/javascript" async
+	    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+    </script>
+  </head>
+  <body class="book">
+  <div id="container">
+    <div id="header" class="clearfix">
+  <div id='title'>
+    <div id='logo'><a href="http://railstutorial.jp/"><img alt="Logo" src="/images/layout/logo.png?1304201481" /></a></div>
+    <h1 id='name'>
+      <a href="http://railstutorial.jp/">Ruby on Rails チュートリアル</a>
+    </h1>
+    <br />
+    <h2 id='authors'>
+      <a href="http://railstutorial.jp/">by Michael Hartl (マイケル・ハートル)</a>
+    </h2>
+    <div class="hamburger-button">
+  <div class="menu-trigger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<div class="drawr">
+  <h1>MENU</h1>
+  <div id="announcement"></div>
+
+    <div class="arrows-section">
+
+        <a class="arrows-disable" href="">
+          <div>
+            <svg style="margin:0 auto;" width="35" height="35" viewBox="0 0 208.79 135.47"><defs xmlns="http://www.w3.org/2000/svg"><style>.a{fill:#fff;}.b{fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;}</style></defs><polygon class="a" points="1.62 67.53 207.59 0.5 169.41 66.56 208.29 133.77 208.29 134.78 1.62 67.53"/><polyline class="b" points="208.29 133.77 208.29 134.78 1.62 67.53 207.59 0.5"/><polyline class="b" points="207.59 0.5 169.41 66.56 208.29 133.77"/></svg>
+          </div>
+          PREV
+        </a>
+
+      <a class="arrows disable-drawr" href="#book_menu">
+        <div>
+          <svg style="margin:0 auto;" width="35" height="35" viewBox="0 0 232.14 136.56"><path fill="#fff" stroke="#fff" d="M262.64,216.23,377.46,351.14H376.2C351.14,343.79,309.3,339,261.91,339s-89,4.79-114,12.11Z" transform="translate(-146.4 -215.46)"/><path fill="#fff" stroke="#fff" d="M376.2,351.14C351.14,343.79,309.3,339,261.91,339s-89,4.79-114,12.11L262.64,216.23,377.46,351.14Z" transform="translate(-146.4 -215.46)"/></svg>
+        </div>
+        UP
+      </a>
+
+        <a class="arrows" href="/chapters/beginning?version=5.1#cha-beginning">
+          <div>
+            <svg style="margin:0 auto;" width="35" height="35" viewBox="0 0 208.79 135.47"><defs xmlns="http://www.w3.org/2000/svg"><style>.a{fill:#fff;}.b{fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;}</style></defs><polygon class="a" points="207.17 67.94 1.2 134.97 39.38 68.92 0.5 1.7 0.5 0.69 207.17 67.94"/><polyline class="b" points="0.5 1.7 0.5 0.69 207.17 67.94 1.2 134.97"/><polyline class="b" points="1.2 134.97 39.38 68.92 0.5 1.7"/></svg>
+          </div>
+          NEXT
+        </a>
+      </div>
+
+  <hr>
+
+  <ul id="menu">
+    <li><a href="/">ホーム</a></li>
+    <li><a href="/seminars">解説セミナー</a></li>
+    <li><a class="disable-drawr" href="/#screencast">解説動画 (質問対応付き)</a></li>
+    <li><a href="/help">ヘルプ</a></li>
+    <li><a href="/contact">お問い合わせ</a></li>
+  </ul>
+
+  <div id="chapters"></div>
+
+  <div class="drawr-share">
+    <div class="drawr-links">
+      <div class="mobile-link-share hatebu">
+        <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-large" data-hatena-bookmark-title="Rails チュートリアル" href="http://b.hatena.ne.jp/entry/railstutorial.jp/" title="このエントリーをはてなブックマークに追加"><img alt="このエントリーをはてなブックマークに追加" height="20" src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" style="border: none;" width="20"></a>
+        <script async="async" charset="utf-8" src="https://b.st-hatena.com/js/bookmark_button.js" type="text/javascript"></script>
+      </div>
+      <div class="fb-like mobile-link-share" data-action="like" data-href="https://railstutorial.jp/" data-layout="box_count" data-share="false" data-show-faces="true" data-size="large" style="height: 85; width:80; margin-left: 15px; margin-right: 15px; margin-top: -5px; display: inline-flex;"></div>
+      <div class="mobile-link-share custom-mobile-link">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frailstutorial.jp%2F&amp;src=sdkpreparse" target="_blank">
+        <div class="share-description-top">
+          <p>シェアする</p>
+        </div>
+
+        <div class="share-description-bottom" style="background-color: #3b5998; border-color: #3b5998;">
+          <svg stroke="#fff" fill="#fff" height="33" viewbox="0 0 1792 1792" width="33" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z">
+          </path></svg>
+          <p style="color: #fff; float:right; margin-right:15px;">Share!</p>
+        </div></a>
+      </div>
+
+      <div class="mobile-link-share custom-mobile-link">
+        <a href="https://twitter.com/intent/tweet?hashtags=Rails%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB&original_referer=http%3A%2F%2Flocalhost%3A3000%2F&ref_src=twsrc%5Etfw&text=Rails%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%EF%BC%9A%E5%AE%9F%E4%BE%8B%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6Rails%E3%82%92%E5%AD%A6%E3%81%BC%E3%81%86&tw_p=tweetbutton&url=https%3A%2F%2Frailstutorial.jp%2F&via=RailsTutorialJP">
+          <div class="share-description-top">
+            <p>ツイートする</p>
+          </div>
+
+          <div class="share-description-bottom" style="background-color: #1da1f2; border-color: #1da1f2;">
+            <svg stroke="#fff" fill="#fff" height="33" viewbox="0 0 1792 1792" width="33" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"></path></svg>
+            <p style="color: #fff; float:right; margin-right:15px;">Tweet!</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="mobile-link-share custom-mobile-link">
+        <a href="https://twitter.com/intent/tweet?user_id=2218766892&lang=ja&text=%E3%81%93%E3%81%AE%E7%AB%A0%E3%81%AEooo%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%A7%E3%81%99%E3%81%8C%E3%80%81%E6%AD%A3%E3%81%97%E3%81%8F%E3%81%AFxxx%E3%81%A0%E3%81%A8%E6%80%9D%E3%81%84%E3%81%BE%E3%81%99%E3%80%82&url=http%3A%2F%2Frailstutorial.jp/?version=5.1&hashtags=Railsチュートリアル">
+            <div class="share-description-top">
+            <p>誤訳を報告する</p>
+          </div>
+
+          <div class="share-description-bottom" style="background-color: #1da1f2; border-color: #1da1f2;">
+            <svg stroke="#fff" fill="#fff" height="33" viewbox="0 0 1792 1792" width="33" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"></path></svg>
+            <p style="color: #fff; float:right; margin-right:15px;">Tweet!</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div style="padding-top: 1em; margin-bottom: 70px; overflow:hidden;">
+      <a href="http://railsguides.jp"><img alt="Railsガイド" src="/images/banners/railsguides-large-size_600_200.png" width="300px"></a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<div class="menu">
+  <div class='links'>
+    <div class='box' style="padding-left: 60px;">
+      <span>
+	<a href="/">ホーム</a>
+      </span>
+      <span class='division'>|</span>
+      <span>
+	<a href="/help">ヘルプ</a>
+      </span>
+      <span class='division'>|</span>
+      <span>
+	<a href="/contact">お問い合わせ</a>
+      </span>
+      <span class='division'>|</span>
+      <span>
+	<a href="/seminars">解説セミナー</a>
+      </span>
+      <span class='division'>|</span>
+      <span>
+	<a href="/#screencast">解説動画 (質問対応付き)</a>
+      </span>
+      <span class='division'>|</span>
+      <span style="padding-top:8px">
+	<a href="http://b.hatena.ne.jp/entry/railstutorial.jp/" class="hatena-bookmark-button"
+	   data-hatena-bookmark-title="Rails チュートリアル" data-hatena-bookmark-layout="simple-balloon"
+	   data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加">
+	  <img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
+	       alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" />
+	</a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+      </span>
+      <span class='division'>|</span>
+      <div class="fb-like" data-href="https://railstutorial.jp/" data-send="false"
+	   data-layout="button_count" data-show-faces="false" data-size="small"
+	   data-font="arial" style="margin-top: -5px;"></div>
+    </div>
+  </div>
+</div>
+
+
+
+    <div id="content">
+      <div id='sidebar'>
+  <div class='content'>
+    <div id='navtool'>
+
+      <table class='layout'>
+        <tr>
+          <td colspan='2'><a href="#book_menu"><img alt="Up A Level" src="/images/buttons/sb_button_up.png?1304201480" /></a></td>
+        </tr>
+        <tr>
+          <td><img alt="Previous Chapter" src="/assets/buttons/sb_button_prev-ba223c8d9bceb768c3e503906bd5876e.png" /></td>
+          <td><a href="/chapters/beginning?version=5.1#cha-beginning"><img alt="Next Chapter" src="/assets/buttons/sb_button_next-2018f09b6d56ec04ec43bfb0cf53741a.png" /></a></td>
+        </tr>
+      </table>
+
+      <a id="sidebar_ebook" href="https://gumroad.com/l/railstutorialjp_ebook">
+        <img alt="電子書籍を購入" src="/images/buttons/sb_btn_ebook.png" />
+      </a>
+      <br />
+      <a id="sidebar_screencast" href="/#screencast">
+        <img alt="実演動画を購入" src="/images/buttons/sb_btn_screencasts.png" />
+      </a>
+      <div id="announcement-origin">
+	<div class='section'>
+          <div><b>Railsチュートリアルの<a href="/#screencast">質問対応サービス</a>が開始!</b> ガッツリと学びたい個人, 法人にオススメです 🎓
+	  </div>
+        </div>
+
+	<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdy6w2lFSORNHc5WBKZ6H2XHOOIj_4yniy3Zy9TZw9khI1rkA/viewform?usp=sf_link"><img alt="[PR] 就業相談受付中 - DIVE INTO CODE" width="151px" src="/assets/DIVE_INTO_CODE-fd20b166ede52fd8f4e1c883dcdb9fe5c275ba5fe2c28737bbcdd0fd952e3a4e.jpg" /></a>
+      </div>
+
+      <div class='connect'>
+        <table class='center'>
+          <tr>
+            <td><a id="sidebar_help" href="/help"><img alt="railstutorialjp-icon24x24" src="/images/icons/help-icon24x24.png?1304201481" title="困った時のヘルプページ" /></a></td>
+            <td><a href="/contact"><img alt="mail-icon24x24" src="/images/icons/email-icon24x24.png?1304201481" title="翻訳に関する問い合わせ" /></a></td>
+            <td><a href="https://twitter.com/RailsTutorialJP" target="_blank"><img alt="twitter-icon24x24" src="/images/icons/twitter-icon24x24.png?1304201481" title="公式Twitterアカウント" /></a></td>
+            <td><a href="https://github.com/yasslab/sample_apps" target="_blank"><img alt="github-icon24x24" src="/images/icons/github-icon24x24.png?1304201481" title="サンプルコード集" /></a></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="section">
+        <div class="switcher">
+            <span class="title round">Rails 5.1 (第4版)</span>
+            <span class="switcher_link">
+              <a href="https://railstutorial.jp/?version=5.0#walk-through">Rails 5.0 (第4版)</a>
+            </span>
+            <span class="switcher_link">
+              <a href="https://railstutorial.jp/?version=4.2#walk-through">Rails 4.2 (第3版)</a>
+            </span>
+            <span class="switcher_link">
+              <a href="https://railstutorial.jp/?version=4.0#walk-through">Rails 4.0 (第2版)</a>
+            </span>
+        </div>
+
+        <div class="share">
+    <div class="fb-share-button" data-href="https://railstutorial.jp/" data-layout="button"
+	 data-size="small" data-mobile-iframe="true" style="padding-bottom: 5px">
+      <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frailstutorial.jp%2F&amp;src=sdkpreparse">シェア</a></div>
+          <a href="https://twitter.com/share"
+             class="twitter-share-button"
+             data-url="https://railstutorial.jp/"
+             data-text="Railsチュートリアル：実例を使ってRailsを学ぼう"
+             data-lang="ja" data-hashtags="Railsチュートリアル" data-via="RailsTutorialJP">ツイート</a>
+          <a href="https://twitter.com/intent/tweet?user_id=2218766892&lang=ja&text=%E3%81%93%E3%81%AE%E7%AB%A0%E3%81%AEooo%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%A7%E3%81%99%E3%81%8C%E3%80%81%E6%AD%A3%E3%81%97%E3%81%8F%E3%81%AFxxx%E3%81%A0%E3%81%A8%E6%80%9D%E3%81%84%E3%81%BE%E3%81%99%E3%80%82&url=http%3A%2F%2Frailstutorial.jp/?version=5.1&hashtags=Railsチュートリアル">
+            <img src="/images/buttons/report_button.png"
+                 onmouseover="this.src='/images/buttons/report_button_hover.png'"
+                  onmouseout="this.src='/images/buttons/report_button.png'"
+                       width="100px" height="20px" />
+          </a>
+        </div>
+      </div>
+
+<!--
+<div>
+  <a id="sidebar_screencast" target="_blank" href="https://diveintocode.recruitment.jp/">
+          <img alt="[PR] Dive into Code 採用情報" width="150px"
+	 src="/images/banners/dive_into_code.png" />
+        </a>
+</div>
+-->
+
+      <div style="color: white; padding-top: 5px;">
+        <a href="http://railsguides.jp"><img alt="Railsガイド" width="150px"
+                                             src="/images/banners/railsguides.png" /></a>
+      </div>
+<!--
+      <div style="color: white;">
+        <a href="/seminars"><img alt="Rails解説セミナー" width="150px"
+                                 src="/images/banners/railsseminar.jpg" /></a>
+      </div>
+-->
+      <!--
+      <div class='section' style="color: #990000; font-weight: bold;">
+        <div>テキスト広告例</div>
+        <div style="font-size: 130%;"><span style="text-decoration: line-through;">2,980円</span> → 1,980円</div>
+        <div>１行は全角１１文字まで</div>
+      </div>
+      -->
+    </div>
+  </div>
+
+</div>
+<script type="text/javascript">
+  mixpanel.track_links("#sidebar_ebook", "click ebook link@sidebar", {
+  referrer: document.referrer
+  });
+  mixpanel.track_links("#sidebar_help", "click help link@sidebar", {
+  referrer: document.referrer
+  });
+</script>
+
+
+      <div id="main" class="withsidebar">
+        <div id="book_menu">
+</div>
+
+
+        <div id="book_wrap">
+          <div id="book_top"></div>
+          <div id="book">
+            <h1 class="title">Ruby on Rails チュートリアル</h1>
+<h1 class="subtitle">実例を使ってRailsを学ぼう</h1>
+<h2 class="author">Michael Hartl (マイケル・ハートル)</h2>
+
+
+
+	    <h2 id="main_content" class="content">本書について</h2>
+            <ul style="margin-left:30px; list-style-type: none; line-height: 25px;">
+              <li>
+                <p><em>本書は <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a> の日本語訳です。
+                    原著と同様に、オンライン版は無料で公開しています。
+                    本書が皆さんの Rails 学習の一助になれば幸いです。</em><br />
+              </li>
+              <li><b>最近の進捗状況</b>: <br />
+                <p style="padding-left: 20px;">
+		  <font color="##990000"><b>[NEW]</b></font> <a href="#screencast">質問対応サービス</a>が始まりました 🏫<br />
+		  <a href="/?version=5.1">Rails 5.1対応 (第4版)</a> を一般公開しました 🚀<br />
+		  8月に<a href="https://coedo-rails.doorkeeper.jp/events/62596">夏季集中セミナー</a>を実施しました 🎓<br />
+		  <a href="https://gumroad.com/l/railstutorialjp_ebook">電子書籍版</a>が購入可能になりました📕✨<br />
+		  Rails解説セミナーの<a href="#screencast">ライブ収録動画</a>を販売 🎥<br />
+		  標準を<a href="/?version=4.2">第3版</a>から<a href="/?version=5.0">第4版</a>に切り替えました👷<br />
+		  <a href="/?version=5.0">Rails 5.0対応の第4版</a>を一般公開しました! 🎉 <br />
+                </p>
+              </li>
+              <li><b>ご協力のお願い</b>: <br />
+                <p style="padding-left: 20px;">
+                  本書を無断で商用利用する事業者が増えてきております。本書は <a href="https://yasslab.jp/">YassLab 株式会社</a>によって運営され、提携した事業者のみが商用で利用できます。提携をご希望の場合や、無断商用利用している事業者を見かけた場合は<a href="/contact">問い合わせフォーム</a>または <a href="https://twitter.com/RailsTutorialJP">@RailsTutorialJP</a> までご連絡ください。
+                </p>
+              </li>
+            </ul>
+
+            <div class="label" id="foreword"></div>
+            <div class="message-from-author">
+              <span class="message-from-author__title">
+                <span class="header">原著者から，日本の読者の皆様へ</span>
+              </span>
+              <p><a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a> が、まつもとゆきひろ (Matz) 氏の母語である日本語でも読めるようになったことを、嬉しく思います。私はここ数年間で、Matz や、日本の Ruby 開発者の方々とお会いしましたが、彼らの技術的な才覚と親切さは、いつも私に感銘を与えてくれます。また、<a href="http://railstutorial.jp/#contributors">安川 要平氏や八田 昌三氏を始めとする多くの協力者の方々</a>が Rails Tutorial を翻訳してくれたことを、私は光栄に思います。彼らの素晴らしい成果に感謝します。</p>
+
+              <p><a href="https://www.railstutorial.org/book">英語版の Rails Tutorial</a> と同様に、日本語版の Rails Tutorial も <a href="http://railstutorial.jp/">HTML 版は無料で読める</a>ようになっています。また、私の賛同を得て、翻訳者の方々は<a id="column_ebook" href="http://tatsu-zine.com/books/railstutorial">日本語版の電子書籍</a>も提供しています。この電子書籍による収益は、翻訳者の方々の活動を支えていきます。もしあなたが日本語の話者であれば、是非本書を手に取ってみてください！</p>
+            </div>
+            <div id="walk-through">
+              <center>
+        <div class='slideshow'>
+	        <iframe src="https://www.slideshare.net/slideshow/embed_code/key/EQ9a1Y9hw5LVEH" width="714" height="565" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/yasulab/railstutorialjp-4e" title="Railsチュートリアルの歩き方 (第4版)" target="_blank">Railsチュートリアルの歩き方 (第4版)</a> </strong> from <strong><a href="https://yasslab.jp/" target="_blank">YassLab 株式会社</a></strong> </div>
+        </div>
+              </center>
+            </div>
+
+	    <hr style="margin-top: 30px;"/>
+<div class="label" id="screencast"></div>
+<div class="label" id="service"></div>
+<div class="special">
+  <span class="title">
+    <span class="header">解説動画 + 質問対応</span>
+  </span>
+  <p>
+    各社と提携し、Railsチュートリアルが質疑応答に対応しました! 😆🎉
+    本書や解説動画を駆使しながら、オンラインまたはオフラインで質問をしながら学ぶことができます。🎓 🏃💨
+    ガッツリとRuby/Railsを学びたい方や、企業研修などで学ばせたい方などにオススメです。
+  </p>
+  <div class='youtube'>
+    <iframe width="622" height="350" src="https://www.youtube.com/embed/2WOc1JaxbOA?rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class='plan'>
+    <div class='plans-card'>
+      <div class='card-top--blue'>
+        <h2>動画で学ぶ</h2>
+      </div>
+      <div class='card-body'>
+        <h3>29,800円</h3>
+        <div class='font-gray'> (税別)</div>
+        <h4>内容</h4>
+        <ul>
+          <li>解説動画</li>
+        </ul>
+        <br>
+        <br>
+        <div class='offering'>
+          <a href='https://yasslab.jp/' class='font-gray' target='_blank'><img src="images/banners/yasslab.png" style="max-height:46px;" alt="提供: YassLab 株式会社" /></a>
+        </div>
+      </div>
+      <div class='card-bottom'>
+        <a href='https://gumroad.com/l/railstutorial_seminars' class='card-btn btn-blue'>詳細を見る</a>
+      </div>
+    </div>
+    <div class='plans-card'>
+      <div class='card-top--green'>
+        <h2>動画+質問で学ぶ</h2>
+      </div>
+      <div class='card-body'>
+        <h3>54,630円</h3>
+        <div class='font-gray'> (税別)</div>
+        <h4>内容</h4>
+        <ul>
+          <li>解説動画</li>
+          <li>オンライン質問対応</li>
+        </ul>
+        <br>
+        <div class='offering'>
+          <a href='https://share-wis.com/' class='font-gray' target='_blank'><img src="images/banners/share_wis.png" style="max-height:46px;" alt="提供: ShareWis" /></a>
+        </div>
+      </div>
+      <div class='card-bottom'>
+        <a href='https://share-wis.com/courses/ruby-on-rails-tutorial-four-ver-five-one/' class='card-btn btn-green'>詳細を見る</a>
+      </div>
+    </div>
+    <div class='plans-card'>
+      <div class='card-top--purple'>
+        <h2>スクールで学ぶ</h2>
+      </div>
+      <div class='card-body'>
+        <h3>150,000円</h3>
+        <div class='font-gray'>(税別)</div>
+        <h4>内容</h4>
+        <ul>
+          <li>解説動画+質問対応</li>
+          <li>Rails転職サポート</li>
+          <li>週1対面授業＠渋谷</li>
+        </ul>
+        <div class='offering'>
+          <a href='http://go.potepan.jp/l/340811/2018-03-29/26pqz5' class='font-gray' target='_blank'><img src="images/banners/potepan.png" style="padding-top: 15px; max-height:54px;" alt="提供: Potepan"/></a>
+        </div>
+      </div>
+      <div class='card-bottom'>
+        <a href='http://go.potepan.jp/l/340811/2018-03-29/26pqz5/' class='card-btn btn-purple'>詳細を見る</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+	    <div id="toc"></div>
+            <h1 class="contents">第4版 目次</h1><div id="table_of_contents"><ul><li class="chapter-star"><a href="/chapters/beginning?version=5.1#推薦の言葉" class="heading hyperref">推薦の言葉</a></li><li class="chapter-star"><a href="/chapters/beginning?version=5.1#謝辞" class="heading hyperref">謝辞</a></li><li class="chapter-star"><a href="/chapters/beginning?version=5.1#author" class="heading hyperref">著者</a></li><li class="chapter-star"><a href="/chapters/beginning?version=5.1#copyright" class="heading hyperref">著作権とライセンス</a></li><li class="chapter"><a href="/chapters/beginning?version=5.1#cha-beginning" class="heading hyperref"><span class="number">第1章</span>ゼロからデプロイまで</a></li><li><ul><li class="section"><a href="/chapters/beginning?version=5.1#sec-introduction" class="heading hyperref"><span class="number">1.1 </span>はじめに</a></li><li><ul><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-prerequisites" class="heading hyperref"><span class="number">1.1.1 </span>前提知識</a></li><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-conventions" class="heading hyperref"><span class="number">1.1.2 </span>この本における取り決め</a></li></ul></li><li class="section"><a href="/chapters/beginning?version=5.1#sec-up_and_running" class="heading hyperref"><span class="number">1.2 </span>さっそく動かす</a></li><li><ul><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-development_environment" class="heading hyperref"><span class="number">1.2.1 </span>開発環境</a></li><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-installing_rails" class="heading hyperref"><span class="number">1.2.2 </span>Railsをインストールする</a></li></ul></li><li class="section"><a href="/chapters/beginning?version=5.1#sec-the_hello_application" class="heading hyperref"><span class="number">1.3 </span>最初のアプリケーション</a></li><li><ul><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-bundler" class="heading hyperref"><span class="number">1.3.1 </span>Bundler</a></li><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-rails_server" class="heading hyperref">
+  <span class="number">1.3.2 </span>
+  <code class="tt">rails server</code>
+</a></li><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-mvc" class="heading hyperref"><span class="number">1.3.3 </span>Model-View-Controller (MVC)</a></li><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-hello_world" class="heading hyperref"><span class="number">1.3.4 </span>Hello, world!</a></li></ul></li><li class="section"><a href="/chapters/beginning?version=5.1#sec-version_control" class="heading hyperref"><span class="number">1.4 </span>Gitによるバージョン管理</a></li><li><ul><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-git_setup" class="heading hyperref"><span class="number">1.4.1 </span>インストールとセットアップ</a></li><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-what_good_does_git_do_you" class="heading hyperref"><span class="number">1.4.2 </span>Gitのメリット</a></li><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-bitbucket" class="heading hyperref"><span class="number">1.4.3 </span>Bitbucket</a></li><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-git_commands" class="heading hyperref"><span class="number">1.4.4 </span>ブランチ、編集、コミット、マージ</a></li></ul></li><li class="section"><a href="/chapters/beginning?version=5.1#sec-deploying" class="heading hyperref"><span class="number">1.5 </span>デプロイする</a></li><li><ul><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-heroku_setup" class="heading hyperref"><span class="number">1.5.1 </span>Herokuのセットアップ</a></li><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-heroku_step_one" class="heading hyperref"><span class="number">1.5.2 </span>Herokuにデプロイする (1)</a></li><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-heroku_step_two" class="heading hyperref"><span class="number">1.5.3 </span>Herokuにデプロイする (2)</a></li><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-heroku_commands" class="heading hyperref"><span class="number">1.5.4 </span>Herokuコマンド</a></li></ul></li><li class="section"><a href="/chapters/beginning?version=5.1#sec-beginning_conclusion" class="heading hyperref"><span class="number">1.6 </span>最後に</a></li><li><ul><li class="subsection"><a href="/chapters/beginning?version=5.1#sec-beginning_what_we_learned_in_this_chapter" class="heading hyperref"><span class="number">1.6.1 </span>本章のまとめ</a></li></ul></li></ul></li><li class="chapter"><a href="/chapters/toy_app?version=5.1#cha-a_toy_app" class="heading hyperref"><span class="number">第2章</span>Toyアプリケーション</a></li><li><ul><li class="section"><a href="/chapters/toy_app?version=5.1#sec-planning_the_application" class="heading hyperref"><span class="number">2.1 </span>アプリケーションの計画</a></li><li><ul><li class="subsection"><a href="/chapters/toy_app?version=5.1#sec-modeling_demo_users" class="heading hyperref"><span class="number">2.1.1 </span>ユーザーのモデル設計</a></li><li class="subsection"><a href="/chapters/toy_app?version=5.1#sec-modeling_demo_microposts" class="heading hyperref"><span class="number">2.1.2 </span>マイクロポストのモデル設計</a></li></ul></li><li class="section"><a href="/chapters/toy_app?version=5.1#sec-demo_users_resource" class="heading hyperref"><span class="number">2.2 </span>Usersリソース</a></li><li><ul><li class="subsection"><a href="/chapters/toy_app?version=5.1#sec-a_user_tour" class="heading hyperref"><span class="number">2.2.1 </span>ユーザーページを探検する</a></li><li class="subsection"><a href="/chapters/toy_app?version=5.1#sec-mvc_in_action" class="heading hyperref"><span class="number">2.2.2 </span>MVCの挙動</a></li><li class="subsection"><a href="/chapters/toy_app?version=5.1#sec-weaknesses_of_this_users_resource" class="heading hyperref"><span class="number">2.2.3 </span>Usersリソースの欠点</a></li></ul></li><li class="section"><a href="/chapters/toy_app?version=5.1#sec-microposts_resource" class="heading hyperref"><span class="number">2.3 </span>Micropostsリソース</a></li><li><ul><li class="subsection"><a href="/chapters/toy_app?version=5.1#sec-a_micropost_microtour" class="heading hyperref"><span class="number">2.3.1 </span>マイクロポストを探検する</a></li><li class="subsection"><a href="/chapters/toy_app?version=5.1#sec-putting_the_micro_in_microposts" class="heading hyperref"><span class="number">2.3.2 </span>マイクロポストを<em>マイクロ</em>にする</a></li><li class="subsection"><a href="/chapters/toy_app?version=5.1#sec-demo_user_has_many_microposts" class="heading hyperref"><span class="number">2.3.3 </span>ユーザーは<code class="tt">たくさん</code>マイクロポストを持っている</a></li><li class="subsection"><a href="/chapters/toy_app?version=5.1#sec-inheritance_hierarchies" class="heading hyperref"><span class="number">2.3.4 </span>継承の階層</a></li><li class="subsection"><a href="/chapters/toy_app?version=5.1#sec-deploying_the_toy_app" class="heading hyperref"><span class="number">2.3.5 </span>アプリケーションをデプロイする</a></li></ul></li><li class="section"><a href="/chapters/toy_app?version=5.1#sec-toy_app_conclusion" class="heading hyperref"><span class="number">2.4 </span>最後に</a></li><li><ul><li class="subsection"><a href="/chapters/toy_app?version=5.1#sec-toy_app_what_we_learned_in_this_chapter" class="heading hyperref"><span class="number">2.4.1 </span>本章のまとめ</a></li></ul></li></ul></li><li class="chapter"><a href="/chapters/static_pages?version=5.1#cha-static_pages" class="heading hyperref"><span class="number">第3章</span>ほぼ静的なページの作成</a></li><li><ul><li class="section"><a href="/chapters/static_pages?version=5.1#sec-sample_app_setup" class="heading hyperref"><span class="number">3.1 </span>セットアップ</a></li><li class="section"><a href="/chapters/static_pages?version=5.1#sec-static_pages" class="heading hyperref"><span class="number">3.2 </span>静的ページ</a></li><li><ul><li class="subsection"><a href="/chapters/static_pages?version=5.1#sec-generated_static_pages" class="heading hyperref"><span class="number">3.2.1 </span>静的なページの生成</a></li><li class="subsection"><a href="/chapters/static_pages?version=5.1#sec-custom_static_pages" class="heading hyperref"><span class="number">3.2.2 </span>静的なページの調整</a></li></ul></li><li class="section"><a href="/chapters/static_pages?version=5.1#sec-getting_started_with_testing" class="heading hyperref"><span class="number">3.3 </span>テストから始める</a></li><li><ul><li class="subsection"><a href="/chapters/static_pages?version=5.1#sec-our_first_test" class="heading hyperref"><span class="number">3.3.1 </span>最初のテスト</a></li><li class="subsection"><a href="/chapters/static_pages?version=5.1#sec-red" class="heading hyperref"><span class="number">3.3.2 </span>Red</a></li><li class="subsection"><a href="/chapters/static_pages?version=5.1#sec-green" class="heading hyperref"><span class="number">3.3.3 </span>Green</a></li><li class="subsection"><a href="/chapters/static_pages?version=5.1#sec-refactor" class="heading hyperref"><span class="number">3.3.4 </span>Refactor</a></li></ul></li><li class="section"><a href="/chapters/static_pages?version=5.1#sec-slightly_dynamic_pages" class="heading hyperref"><span class="number">3.4 </span>少しだけ動的なページ</a></li><li><ul><li class="subsection"><a href="/chapters/static_pages?version=5.1#sec-testing_titles" class="heading hyperref"><span class="number">3.4.1 </span>タイトルをテストする (Red)</a></li><li class="subsection"><a href="/chapters/static_pages?version=5.1#sec-adding_page_titles" class="heading hyperref"><span class="number">3.4.2 </span>タイトルを追加する (Green)</a></li><li class="subsection"><a href="/chapters/static_pages?version=5.1#sec-layouts_and_embedded_ruby" class="heading hyperref"><span class="number">3.4.3 </span>レイアウトと埋め込みRuby (Refactor)</a></li><li class="subsection"><a href="/chapters/static_pages?version=5.1#sec-setting_the_root_route" class="heading hyperref"><span class="number">3.4.4 </span>ルーティングの設定</a></li></ul></li><li class="section"><a href="/chapters/static_pages?version=5.1#sec-static_pages_conclusion" class="heading hyperref"><span class="number">3.5 </span>最後に</a></li><li><ul><li class="subsection"><a href="/chapters/static_pages?version=5.1#sec-static_pages_what_we_learned_in_this_chapter" class="heading hyperref"><span class="number">3.5.1 </span>本章のまとめ</a></li></ul></li><li class="section"><a href="/chapters/static_pages?version=5.1#sec-advanced_testing_setup" class="heading hyperref"><span class="number">3.6 </span>高度なセットアップ</a></li><li><ul><li class="subsection"><a href="/chapters/static_pages?version=5.1#sec-minitest_reporters" class="heading hyperref"><span class="number">3.6.1 </span>minitest reporters</a></li><li class="subsection"><a href="/chapters/static_pages?version=5.1#sec-guard" class="heading hyperref"><span class="number">3.6.2 </span>Guardによるテストの自動化</a></li></ul></li></ul></li><li class="chapter"><a href="/chapters/rails_flavored_ruby?version=5.1#cha-rails_flavored_ruby" class="heading hyperref"><span class="number">第4章</span>Rails風味のRuby</a></li><li><ul><li class="section"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-motivation" class="heading hyperref"><span class="number">4.1 </span>動機</a></li><li><ul><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-built_in_helpers" class="heading hyperref"><span class="number">4.1.1 </span>組み込みヘルパー</a></li><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-custom_helpers" class="heading hyperref"><span class="number">4.1.2 </span>カスタムヘルパー</a></li></ul></li><li class="section"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-strings_and_methods" class="heading hyperref"><span class="number">4.2 </span>文字列とメソッド</a></li><li><ul><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-comments" class="heading hyperref"><span class="number">4.2.1 </span>コメント</a></li><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-strings" class="heading hyperref"><span class="number">4.2.2 </span>文字列</a></li><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-objects_and_message_passing" class="heading hyperref"><span class="number">4.2.3 </span>オブジェクトとメッセージ受け渡し</a></li><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-method_definitions" class="heading hyperref"><span class="number">4.2.4 </span>メソッドの定義</a></li><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-back_to_the_title_helper" class="heading hyperref"><span class="number">4.2.5 </span>titleヘルパー、再び</a></li></ul></li><li class="section"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-other_data_structures" class="heading hyperref"><span class="number">4.3 </span>他のデータ構造</a></li><li><ul><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-arrays_and_ranges" class="heading hyperref"><span class="number">4.3.1 </span>配列と範囲演算子</a></li><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-blocks" class="heading hyperref"><span class="number">4.3.2 </span>ブロック</a></li><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-hashes_and_symbols" class="heading hyperref"><span class="number">4.3.3 </span>ハッシュとシンボル</a></li><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-css_revisited" class="heading hyperref"><span class="number">4.3.4 </span>CSS、再び</a></li></ul></li><li class="section"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-ruby_classes" class="heading hyperref"><span class="number">4.4 </span>Rubyにおけるクラス</a></li><li><ul><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-constructors" class="heading hyperref"><span class="number">4.4.1 </span>コンストラクタ</a></li><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-a_class_of_our_own" class="heading hyperref"><span class="number">4.4.2 </span>クラス継承</a></li><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-modifying_built_in_classes" class="heading hyperref"><span class="number">4.4.3 </span>組み込みクラスの変更</a></li><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-a_controller_class" class="heading hyperref"><span class="number">4.4.4 </span>コントローラクラス</a></li><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-a_user_class" class="heading hyperref"><span class="number">4.4.5 </span>ユーザークラス</a></li></ul></li><li class="section"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-conclusion" class="heading hyperref"><span class="number">4.5 </span>最後に</a></li><li><ul><li class="subsection"><a href="/chapters/rails_flavored_ruby?version=5.1#sec-rails_flavored_ruby_what_we_learned_in_this_chapter" class="heading hyperref"><span class="number">4.5.1 </span>本章のまとめ</a></li></ul></li></ul></li><li class="chapter"><a href="/chapters/filling_in_the_layout?version=5.1#cha-filling_in_the_layout" class="heading hyperref"><span class="number">第5章</span>レイアウトを作成する</a></li><li><ul><li class="section"><a href="/chapters/filling_in_the_layout?version=5.1#sec-structure" class="heading hyperref"><span class="number">5.1 </span>構造を追加する</a></li><li><ul><li class="subsection"><a href="/chapters/filling_in_the_layout?version=5.1#sec-adding_to_the_layout" class="heading hyperref"><span class="number">5.1.1 </span>ナビゲーション</a></li><li class="subsection"><a href="/chapters/filling_in_the_layout?version=5.1#sec-custom_css" class="heading hyperref"><span class="number">5.1.2 </span>BootstrapとカスタムCSS</a></li><li class="subsection"><a href="/chapters/filling_in_the_layout?version=5.1#sec-partials" class="heading hyperref"><span class="number">5.1.3 </span>パーシャル (partial)</a></li></ul></li><li class="section"><a href="/chapters/filling_in_the_layout?version=5.1#sec-sass_and_the_asset_pipeline" class="heading hyperref"><span class="number">5.2 </span>Sassとアセットパイプライン</a></li><li><ul><li class="subsection"><a href="/chapters/filling_in_the_layout?version=5.1#sec-the_asset_pipeline" class="heading hyperref"><span class="number">5.2.1 </span>アセットパイプライン</a></li><li class="subsection"><a href="/chapters/filling_in_the_layout?version=5.1#sec-sass" class="heading hyperref"><span class="number">5.2.2 </span>素晴らしい構文を備えたスタイルシート</a></li></ul></li><li class="section"><a href="/chapters/filling_in_the_layout?version=5.1#sec-layout_links" class="heading hyperref"><span class="number">5.3 </span>レイアウトのリンク</a></li><li><ul><li class="subsection"><a href="/chapters/filling_in_the_layout?version=5.1#sec-contact_page" class="heading hyperref"><span class="number">5.3.1 </span>Contactページ</a></li><li class="subsection"><a href="/chapters/filling_in_the_layout?version=5.1#sec-rails_routes" class="heading hyperref"><span class="number">5.3.2 </span>RailsのルートURL</a></li><li class="subsection"><a href="/chapters/filling_in_the_layout?version=5.1#sec-named_routes" class="heading hyperref"><span class="number">5.3.3 </span>名前付きルート</a></li><li class="subsection"><a href="/chapters/filling_in_the_layout?version=5.1#sec-layout_link_tests" class="heading hyperref"><span class="number">5.3.4 </span>リンクのテスト</a></li></ul></li><li class="section"><a href="/chapters/filling_in_the_layout?version=5.1#sec-user_signup" class="heading hyperref"><span class="number">5.4 </span>ユーザー登録: 最初のステップ</a></li><li><ul><li class="subsection"><a href="/chapters/filling_in_the_layout?version=5.1#sec-users_controller" class="heading hyperref"><span class="number">5.4.1 </span>Usersコントローラ</a></li><li class="subsection"><a href="/chapters/filling_in_the_layout?version=5.1#sec-signup_url" class="heading hyperref"><span class="number">5.4.2 </span>ユーザー登録用URL</a></li></ul></li><li class="section"><a href="/chapters/filling_in_the_layout?version=5.1#sec-layout_conclusion" class="heading hyperref"><span class="number">5.5 </span>最後に</a></li><li><ul><li class="subsection"><a href="/chapters/filling_in_the_layout?version=5.1#sec-filling_in_the_layout_what_we_learned_in_this_chapter" class="heading hyperref"><span class="number">5.5.1 </span>本章のまとめ</a></li></ul></li></ul></li><li class="chapter"><a href="/chapters/modeling_users?version=5.1#cha-modeling_users" class="heading hyperref"><span class="number">第6章</span>ユーザーのモデルを作成する</a></li><li><ul><li class="section"><a href="/chapters/modeling_users?version=5.1#sec-user_model" class="heading hyperref"><span class="number">6.1 </span>Userモデル</a></li><li><ul><li class="subsection"><a href="/chapters/modeling_users?version=5.1#sec-database_migrations" class="heading hyperref"><span class="number">6.1.1 </span>データベースの移行</a></li><li class="subsection"><a href="/chapters/modeling_users?version=5.1#sec-the_model_file" class="heading hyperref"><span class="number">6.1.2 </span>modelファイル</a></li><li class="subsection"><a href="/chapters/modeling_users?version=5.1#sec-creating_user_objects" class="heading hyperref"><span class="number">6.1.3 </span>ユーザーオブジェクトを作成する</a></li><li class="subsection"><a href="/chapters/modeling_users?version=5.1#sec-finding_user_objects" class="heading hyperref"><span class="number">6.1.4 </span>ユーザーオブジェクトを検索する</a></li><li class="subsection"><a href="/chapters/modeling_users?version=5.1#sec-updating_user_objects" class="heading hyperref"><span class="number">6.1.5 </span>ユーザーオブジェクトを更新する</a></li></ul></li><li class="section"><a href="/chapters/modeling_users?version=5.1#sec-user_validations" class="heading hyperref"><span class="number">6.2 </span>ユーザーを検証する</a></li><li><ul><li class="subsection"><a href="/chapters/modeling_users?version=5.1#sec-a_validity_test" class="heading hyperref"><span class="number">6.2.1 </span>有効性を検証する</a></li><li class="subsection"><a href="/chapters/modeling_users?version=5.1#sec-presence_validation" class="heading hyperref"><span class="number">6.2.2 </span>存在性を検証する</a></li><li class="subsection"><a href="/chapters/modeling_users?version=5.1#sec-length_validation" class="heading hyperref"><span class="number">6.2.3 </span>長さを検証する</a></li><li class="subsection"><a href="/chapters/modeling_users?version=5.1#sec-format_validation" class="heading hyperref"><span class="number">6.2.4 </span>フォーマットを検証する</a></li><li class="subsection"><a href="/chapters/modeling_users?version=5.1#sec-uniqueness_validation" class="heading hyperref"><span class="number">6.2.5 </span>一意性を検証する</a></li></ul></li><li class="section"><a href="/chapters/modeling_users?version=5.1#sec-adding_a_secure_password" class="heading hyperref"><span class="number">6.3 </span>セキュアなパスワードを追加する</a></li><li><ul><li class="subsection"><a href="/chapters/modeling_users?version=5.1#sec-a_hashed_password" class="heading hyperref"><span class="number">6.3.1 </span>ハッシュ化されたパスワード</a></li><li class="subsection"><a href="/chapters/modeling_users?version=5.1#sec-has_secure_password" class="heading hyperref"><span class="number">6.3.2 </span>ユーザーがセキュアなパスワードを持っている</a></li><li class="subsection"><a href="/chapters/modeling_users?version=5.1#sec-minimum_password_standards" class="heading hyperref"><span class="number">6.3.3 </span>パスワードの最小文字数</a></li><li class="subsection"><a href="/chapters/modeling_users?version=5.1#sec-creating_and_authenticating_a_user" class="heading hyperref"><span class="number">6.3.4 </span>ユーザーの作成と認証</a></li></ul></li><li class="section"><a href="/chapters/modeling_users?version=5.1#sec-modeling_users_conclusion" class="heading hyperref"><span class="number">6.4 </span>最後に</a></li><li><ul><li class="subsection"><a href="/chapters/modeling_users?version=5.1#sec-modeling_users_what_we_learned_in_this_chapter" class="heading hyperref"><span class="number">6.4.1 </span>本章のまとめ</a></li></ul></li></ul></li><li class="chapter"><a href="/chapters/sign_up?version=5.1#cha-sign_up" class="heading hyperref"><span class="number">第7章</span>ユーザー登録</a></li><li><ul><li class="section"><a href="/chapters/sign_up?version=5.1#sec-showing_users" class="heading hyperref"><span class="number">7.1 </span>ユーザーを表示する</a></li><li><ul><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-rails_environments" class="heading hyperref"><span class="number">7.1.1 </span>デバッグとRails環境</a></li><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-a_users_resource" class="heading hyperref"><span class="number">7.1.2 </span>Usersリソース</a></li><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-debugger" class="heading hyperref"><span class="number">7.1.3 </span>debuggerメソッド</a></li><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-a_gravatar_image" class="heading hyperref"><span class="number">7.1.4 </span>Gravatar画像とサイドバー</a></li></ul></li><li class="section"><a href="/chapters/sign_up?version=5.1#sec-signup_form" class="heading hyperref"><span class="number">7.2 </span>ユーザー登録フォーム</a></li><li><ul><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-using_form_for" class="heading hyperref"><span class="number">7.2.1 </span><code class="tt">form_for</code>を使用する</a></li><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-the_form_html" class="heading hyperref"><span class="number">7.2.2 </span>フォームHTML</a></li></ul></li><li class="section"><a href="/chapters/sign_up?version=5.1#sec-unsuccessful_signups" class="heading hyperref"><span class="number">7.3 </span>ユーザー登録失敗</a></li><li><ul><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-a_working_form" class="heading hyperref"><span class="number">7.3.1 </span>正しいフォーム</a></li><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-strong_parameters" class="heading hyperref"><span class="number">7.3.2 </span>Strong Parameters</a></li><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-signup_error_messages" class="heading hyperref"><span class="number">7.3.3 </span>エラーメッセージ</a></li><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-a_test_for_invalid_submission" class="heading hyperref"><span class="number">7.3.4 </span>失敗時のテスト</a></li></ul></li><li class="section"><a href="/chapters/sign_up?version=5.1#sec-successful_signups" class="heading hyperref"><span class="number">7.4 </span>ユーザー登録成功</a></li><li><ul><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-the_finished_signup_form" class="heading hyperref"><span class="number">7.4.1 </span>登録フォームの完成</a></li><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-the_flash" class="heading hyperref"><span class="number">7.4.2 </span>flash</a></li><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-the_first_signup" class="heading hyperref"><span class="number">7.4.3 </span>実際のユーザー登録</a></li><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-a_test_for_valid_submission" class="heading hyperref"><span class="number">7.4.4 </span>成功時のテスト</a></li></ul></li><li class="section"><a href="/chapters/sign_up?version=5.1#sec-professional_grade_deployment" class="heading hyperref"><span class="number">7.5 </span>プロのデプロイ</a></li><li><ul><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-ssl_in_production" class="heading hyperref"><span class="number">7.5.1 </span>本番環境でのSSL</a></li><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-production_webserver" class="heading hyperref"><span class="number">7.5.2 </span>本番環境用のWebサーバー</a></li><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-production_deployment" class="heading hyperref"><span class="number">7.5.3 </span>本番環境へのデプロイ</a></li></ul></li><li class="section"><a href="/chapters/sign_up?version=5.1#sec-sign_up_conclusion" class="heading hyperref"><span class="number">7.6 </span>最後に</a></li><li><ul><li class="subsection"><a href="/chapters/sign_up?version=5.1#sec-sign_up_what_we_learned_in_this_chapter" class="heading hyperref"><span class="number">7.6.1 </span>本章のまとめ</a></li></ul></li></ul></li><li class="chapter"><a href="/chapters/basic_login?version=5.1#cha-basic_login" class="heading hyperref"><span class="number">第8章</span>基本的なログイン機構</a></li><li><ul><li class="section"><a href="/chapters/basic_login?version=5.1#sec-sessions_and_failed_login" class="heading hyperref"><span class="number">8.1 </span>セッション</a></li><li><ul><li class="subsection"><a href="/chapters/basic_login?version=5.1#sec-sessions_controller" class="heading hyperref"><span class="number">8.1.1 </span>Sessionsコントローラ</a></li><li class="subsection"><a href="/chapters/basic_login?version=5.1#sec-login_form" class="heading hyperref"><span class="number">8.1.2 </span>ログインフォーム</a></li><li class="subsection"><a href="/chapters/basic_login?version=5.1#sec-finding_and_authenticating_a_user" class="heading hyperref"><span class="number">8.1.3 </span>ユーザーの検索と認証</a></li><li class="subsection"><a href="/chapters/basic_login?version=5.1#sec-rendering_with_a_flash_message" class="heading hyperref"><span class="number">8.1.4 </span>フラッシュメッセージを表示する</a></li><li class="subsection"><a href="/chapters/basic_login?version=5.1#sec-a_flash_test" class="heading hyperref"><span class="number">8.1.5 </span>フラッシュのテスト</a></li></ul></li><li class="section"><a href="/chapters/basic_login?version=5.1#sec-logging_in" class="heading hyperref"><span class="number">8.2 </span>ログイン</a></li><li><ul><li class="subsection"><a href="/chapters/basic_login?version=5.1#sec-a_working_log_in_method" class="heading hyperref"><span class="number">8.2.1 </span><code class="tt">log_in</code>メソッド</a></li><li class="subsection"><a href="/chapters/basic_login?version=5.1#sec-current_user" class="heading hyperref"><span class="number">8.2.2 </span>現在のユーザー</a></li><li class="subsection"><a href="/chapters/basic_login?version=5.1#sec-changing_the_layout_links" class="heading hyperref"><span class="number">8.2.3 </span>レイアウトリンクを変更する</a></li><li class="subsection"><a href="/chapters/basic_login?version=5.1#sec-testing_layout_changes" class="heading hyperref"><span class="number">8.2.4 </span>レイアウトの変更をテストする</a></li><li class="subsection"><a href="/chapters/basic_login?version=5.1#sec-login_upon_signup" class="heading hyperref"><span class="number">8.2.5 </span>ユーザー登録時にログイン</a></li></ul></li><li class="section"><a href="/chapters/basic_login?version=5.1#sec-logging_out" class="heading hyperref"><span class="number">8.3 </span>ログアウト</a></li><li class="section"><a href="/chapters/basic_login?version=5.1#sec-basic_login_conclusion" class="heading hyperref"><span class="number">8.4 </span>最後に</a></li><li><ul><li class="subsection"><a href="/chapters/basic_login?version=5.1#sec-basic_login_what_we_learned_in_this_chapter" class="heading hyperref"><span class="number">8.4.1 </span>本章のまとめ</a></li></ul></li></ul></li><li class="chapter"><a href="/chapters/advanced_login?version=5.1#cha-advanced_login" class="heading hyperref"><span class="number">第9章</span>発展的なログイン機構</a></li><li><ul><li class="section"><a href="/chapters/advanced_login?version=5.1#sec-remember_me" class="heading hyperref"><span class="number">9.1 </span>Remember me 機能</a></li><li><ul><li class="subsection"><a href="/chapters/advanced_login?version=5.1#sec-remember_token" class="heading hyperref"><span class="number">9.1.1 </span>記憶トークンと暗号化</a></li><li class="subsection"><a href="/chapters/advanced_login?version=5.1#sec-login_with_remembering" class="heading hyperref"><span class="number">9.1.2 </span>ログイン状態の保持</a></li><li class="subsection"><a href="/chapters/advanced_login?version=5.1#sec-forgetting_users" class="heading hyperref"><span class="number">9.1.3 </span>ユーザーを忘れる</a></li><li class="subsection"><a href="/chapters/advanced_login?version=5.1#sec-two_subtle_bugs" class="heading hyperref"><span class="number">9.1.4 </span>２つの目立たないバグ</a></li></ul></li><li class="section"><a href="/chapters/advanced_login?version=5.1#sec-remember_me_checkbox" class="heading hyperref"><span class="number">9.2 </span>[Remember me] チェックボックス</a></li><li class="section"><a href="/chapters/advanced_login?version=5.1#sec-remember_tests" class="heading hyperref"><span class="number">9.3 </span>[Remember me] のテスト</a></li><li><ul><li class="subsection"><a href="/chapters/advanced_login?version=5.1#sec-testing_the_remember_me_box" class="heading hyperref"><span class="number">9.3.1 </span>[Remember me] ボックスをテストする</a></li><li class="subsection"><a href="/chapters/advanced_login?version=5.1#sec-testing_the_remember_branch" class="heading hyperref"><span class="number">9.3.2 </span>[Remember me] をテストする</a></li></ul></li><li class="section"><a href="/chapters/advanced_login?version=5.1#sec-advanced_login_conclusion" class="heading hyperref"><span class="number">9.4 </span>最後に</a></li><li><ul><li class="subsection"><a href="/chapters/advanced_login?version=5.1#sec-advanced_login_what_we_learned_in_this_chapter" class="heading hyperref"><span class="number">9.4.1 </span>本章のまとめ</a></li></ul></li></ul></li><li class="chapter"><a href="/chapters/updating_and_deleting_users?version=5.1#cha-updating_showing_and_deleting_users" class="heading hyperref"><span class="number">第10章</span>ユーザーの更新・表示・削除</a></li><li><ul><li class="section"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-updating_users" class="heading hyperref"><span class="number">10.1 </span>ユーザーを更新する</a></li><li><ul><li class="subsection"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-edit_form" class="heading hyperref"><span class="number">10.1.1 </span>編集フォーム</a></li><li class="subsection"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-unsuccessful_edits" class="heading hyperref"><span class="number">10.1.2 </span>編集の失敗</a></li><li class="subsection"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-testing_unsuccessful_edits" class="heading hyperref"><span class="number">10.1.3 </span>編集失敗時のテスト</a></li><li class="subsection"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-successful_edits" class="heading hyperref"><span class="number">10.1.4 </span>TDDで編集を成功させる</a></li></ul></li><li class="section"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-authorization" class="heading hyperref"><span class="number">10.2 </span>認可</a></li><li><ul><li class="subsection"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-requiring_logged_in_users" class="heading hyperref"><span class="number">10.2.1 </span>ユーザーにログインを要求する</a></li><li class="subsection"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-requiring_the_right_user" class="heading hyperref"><span class="number">10.2.2 </span>正しいユーザーを要求する</a></li><li class="subsection"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-friendly_forwarding" class="heading hyperref"><span class="number">10.2.3 </span>フレンドリーフォワーディング</a></li></ul></li><li class="section"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-showing_all_users" class="heading hyperref"><span class="number">10.3 </span>すべてのユーザーを表示する</a></li><li><ul><li class="subsection"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-users_index" class="heading hyperref"><span class="number">10.3.1 </span>ユーザーの一覧ページ</a></li><li class="subsection"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-sample_users" class="heading hyperref"><span class="number">10.3.2 </span>サンプルのユーザー</a></li><li class="subsection"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-pagination" class="heading hyperref"><span class="number">10.3.3 </span>ページネーション</a></li><li class="subsection"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-users_index_test" class="heading hyperref"><span class="number">10.3.4 </span>ユーザー一覧のテスト</a></li><li class="subsection"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-partial_refactoring" class="heading hyperref"><span class="number">10.3.5 </span>パーシャルのリファクタリング</a></li></ul></li><li class="section"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-deleting_users" class="heading hyperref"><span class="number">10.4 </span>ユーザーを削除する</a></li><li><ul><li class="subsection"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-administrative_users" class="heading hyperref"><span class="number">10.4.1 </span>管理ユーザー</a></li><li class="subsection"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-the_destroy_action" class="heading hyperref"><span class="number">10.4.2 </span><code class="tt">destroy</code>アクション</a></li><li class="subsection"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-user_destroy_tests" class="heading hyperref"><span class="number">10.4.3 </span>ユーザー削除のテスト</a></li></ul></li><li class="section"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-updating_and_deleting_users_conclusion" class="heading hyperref"><span class="number">10.5 </span>最後に</a></li><li><ul><li class="subsection"><a href="/chapters/updating_and_deleting_users?version=5.1#sec-updating_what_we_learned_in_this_chapter" class="heading hyperref"><span class="number">10.5.1 </span>本章のまとめ</a></li></ul></li></ul></li><li class="chapter"><a href="/chapters/account_activation?version=5.1#cha-account_activation" class="heading hyperref"><span class="number">第11章</span>アカウントの有効化</a></li><li><ul><li class="section"><a href="/chapters/account_activation?version=5.1#sec-account_activations_resource" class="heading hyperref"><span class="number">11.1 </span>AccountActivationsリソース</a></li><li><ul><li class="subsection"><a href="/chapters/account_activation?version=5.1#sec-account_activations_controller" class="heading hyperref"><span class="number">11.1.1 </span>AccountActivationsコントローラ</a></li><li class="subsection"><a href="/chapters/account_activation?version=5.1#sec-account_activation_data_model" class="heading hyperref"><span class="number">11.1.2 </span>AccountActivationのデータモデル</a></li></ul></li><li class="section"><a href="/chapters/account_activation?version=5.1#sec-account_activation_emails" class="heading hyperref"><span class="number">11.2 </span>アカウント有効化のメール送信</a></li><li><ul><li class="subsection"><a href="/chapters/account_activation?version=5.1#sec-mailer_templates" class="heading hyperref"><span class="number">11.2.1 </span>送信メールのテンプレート</a></li><li class="subsection"><a href="/chapters/account_activation?version=5.1#sec-email_previews" class="heading hyperref"><span class="number">11.2.2 </span>送信メールのプレビュー</a></li><li class="subsection"><a href="/chapters/account_activation?version=5.1#sec-email_tests" class="heading hyperref"><span class="number">11.2.3 </span>送信メールのテスト</a></li><li class="subsection"><a href="/chapters/account_activation?version=5.1#sec-updating_create" class="heading hyperref"><span class="number">11.2.4 </span>ユーザーの<code class="tt">create</code>アクションを更新</a></li></ul></li><li class="section"><a href="/chapters/account_activation?version=5.1#sec-activating_the_account" class="heading hyperref"><span class="number">11.3 </span>アカウントを有効化する</a></li><li><ul><li class="subsection"><a href="/chapters/account_activation?version=5.1#sec-generalizing_the_authenticated_method" class="heading hyperref"><span class="number">11.3.1 </span><code class="tt">authenticated?</code>メソッドの抽象化</a></li><li class="subsection"><a href="/chapters/account_activation?version=5.1#sec-activation_edit_action" class="heading hyperref"><span class="number">11.3.2 </span><code class="tt">edit</code>アクションで有効化</a></li><li class="subsection"><a href="/chapters/account_activation?version=5.1#sec-activation_test_and_refactoring" class="heading hyperref"><span class="number">11.3.3 </span>有効化のテストとリファクタリング</a></li></ul></li><li class="section"><a href="/chapters/account_activation?version=5.1#sec-activation_email_in_production" class="heading hyperref"><span class="number">11.4 </span>本番環境でのメール送信</a></li><li class="section"><a href="/chapters/account_activation?version=5.1#sec-activation_conclusion" class="heading hyperref"><span class="number">11.5 </span>最後に</a></li><li><ul><li class="subsection"><a href="/chapters/account_activation?version=5.1#sec-activation_what_we_learned_in_this_chapter" class="heading hyperref"><span class="number">11.5.1 </span>本章のまとめ</a></li></ul></li></ul></li><li class="chapter"><a href="/chapters/password_reset?version=5.1#cha-password_reset" class="heading hyperref"><span class="number">第12章</span>パスワードの再設定</a></li><li><ul><li class="section"><a href="/chapters/password_reset?version=5.1#sec-password_resets_resource" class="heading hyperref"><span class="number">12.1 </span>PasswordResetsリソース</a></li><li><ul><li class="subsection"><a href="/chapters/password_reset?version=5.1#sec-password_resets_controller" class="heading hyperref"><span class="number">12.1.1 </span>PasswordResetsコントローラ</a></li><li class="subsection"><a href="/chapters/password_reset?version=5.1#sec-new_password_resets" class="heading hyperref"><span class="number">12.1.2 </span>新しいパスワードの設定</a></li><li class="subsection"><a href="/chapters/password_reset?version=5.1#sec-password_reset_create_action" class="heading hyperref"><span class="number">12.1.3 </span><code class="tt">create</code>アクションでパスワード再設定</a></li></ul></li><li class="section"><a href="/chapters/password_reset?version=5.1#sec-password_reset_emails" class="heading hyperref"><span class="number">12.2 </span>パスワード再設定のメール送信</a></li><li><ul><li class="subsection"><a href="/chapters/password_reset?version=5.1#sec-password_reset_mailer" class="heading hyperref"><span class="number">12.2.1 </span>パスワード再設定のメールとテンプレート</a></li><li class="subsection"><a href="/chapters/password_reset?version=5.1#sec-reset_email_tests" class="heading hyperref"><span class="number">12.2.2 </span>送信メールのテスト</a></li></ul></li><li class="section"><a href="/chapters/password_reset?version=5.1#sec-resetting_the_password" class="heading hyperref"><span class="number">12.3 </span>パスワードを再設定する</a></li><li><ul><li class="subsection"><a href="/chapters/password_reset?version=5.1#sec-reset_edit_action" class="heading hyperref"><span class="number">12.3.1 </span><code class="tt">edit</code>アクションで再設定</a></li><li class="subsection"><a href="/chapters/password_reset?version=5.1#sec-updating_the_reset" class="heading hyperref"><span class="number">12.3.2 </span>パスワードを更新する</a></li><li class="subsection"><a href="/chapters/password_reset?version=5.1#sec-password_reset_test" class="heading hyperref"><span class="number">12.3.3 </span>パスワードの再設定をテストする</a></li></ul></li><li class="section"><a href="/chapters/password_reset?version=5.1#sec-reset_email_in_production" class="heading hyperref"><span class="number">12.4 </span>本番環境でのメール送信 (再掲)</a></li><li class="section"><a href="/chapters/password_reset?version=5.1#sec-resets_conclusion" class="heading hyperref"><span class="number">12.5 </span>最後に</a></li><li><ul><li class="subsection"><a href="/chapters/password_reset?version=5.1#sec-activation_resets_what_we_learned_in_this_chapter" class="heading hyperref"><span class="number">12.5.1 </span>本章のまとめ</a></li></ul></li><li class="section"><a href="/chapters/password_reset?version=5.1#sec-expiration_proof" class="heading hyperref"><span class="number">12.6 </span>証明: 期限切れの比較</a></li></ul></li><li class="chapter"><a href="/chapters/user_microposts?version=5.1#cha-user_microposts" class="heading hyperref"><span class="number">第13章</span>ユーザーのマイクロポスト</a></li><li><ul><li class="section"><a href="/chapters/user_microposts?version=5.1#sec-a_micropost_model" class="heading hyperref"><span class="number">13.1 </span>Micropostモデル</a></li><li><ul><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-the_basic_model" class="heading hyperref"><span class="number">13.1.1 </span>基本的なモデル</a></li><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-micropost_validations" class="heading hyperref"><span class="number">13.1.2 </span>Micropostのバリデーション</a></li><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-user_micropost_associations" class="heading hyperref"><span class="number">13.1.3 </span>User/Micropostの関連付け</a></li><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-ordering_and_dependency" class="heading hyperref"><span class="number">13.1.4 </span>マイクロポストを改良する</a></li></ul></li><li class="section"><a href="/chapters/user_microposts?version=5.1#sec-showing_microposts" class="heading hyperref"><span class="number">13.2 </span>マイクロポストを表示する</a></li><li><ul><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-rendering_microposts" class="heading hyperref"><span class="number">13.2.1 </span>マイクロポストの描画</a></li><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-sample_microposts" class="heading hyperref"><span class="number">13.2.2 </span>マイクロポストのサンプル</a></li><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-profile_micropost_tests" class="heading hyperref"><span class="number">13.2.3 </span>プロフィール画面のマイクロポストをテストする</a></li></ul></li><li class="section"><a href="/chapters/user_microposts?version=5.1#sec-manipulating_microposts" class="heading hyperref"><span class="number">13.3 </span>マイクロポストを操作する</a></li><li><ul><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-micropost_access_control" class="heading hyperref"><span class="number">13.3.1 </span>マイクロポストのアクセス制御</a></li><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-creating_microposts" class="heading hyperref"><span class="number">13.3.2 </span>マイクロポストを作成する</a></li><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-a_proto_feed" class="heading hyperref"><span class="number">13.3.3 </span>フィードの原型</a></li><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-destroying_microposts" class="heading hyperref"><span class="number">13.3.4 </span>マイクロポストを削除する</a></li><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-micropost_tests" class="heading hyperref"><span class="number">13.3.5 </span>フィード画面のマイクロポストをテストする</a></li></ul></li><li class="section"><a href="/chapters/user_microposts?version=5.1#sec-micropost_images" class="heading hyperref"><span class="number">13.4 </span>マイクロポストの画像投稿</a></li><li><ul><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-basic_image_upload" class="heading hyperref"><span class="number">13.4.1 </span>基本的な画像アップロード</a></li><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-image_validation" class="heading hyperref"><span class="number">13.4.2 </span>画像の検証</a></li><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-image_resizing" class="heading hyperref"><span class="number">13.4.3 </span>画像のリサイズ</a></li><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-image_upload_in_production" class="heading hyperref"><span class="number">13.4.4 </span>本番環境での画像アップロード</a></li></ul></li><li class="section"><a href="/chapters/user_microposts?version=5.1#sec-user_microposts_conclusion" class="heading hyperref"><span class="number">13.5 </span>最後に</a></li><li><ul><li class="subsection"><a href="/chapters/user_microposts?version=5.1#sec-user_microposts_what_we_learned_in_this_chapter" class="heading hyperref"><span class="number">13.5.1 </span>本章のまとめ</a></li></ul></li></ul></li><li class="chapter"><a href="/chapters/following_users?version=5.1#cha-following_users" class="heading hyperref"><span class="number">第14章</span>ユーザーをフォローする</a></li><li><ul><li class="section"><a href="/chapters/following_users?version=5.1#sec-the_relationship_model" class="heading hyperref"><span class="number">14.1 </span>Relationshipモデル</a></li><li><ul><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-a_problem_with_the_data_model" class="heading hyperref"><span class="number">14.1.1 </span>データモデルの問題 (および解決策)</a></li><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-relationship_user_associations" class="heading hyperref"><span class="number">14.1.2 </span>User/Relationshipの関連付け</a></li><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-relationship_validations" class="heading hyperref"><span class="number">14.1.3 </span>Relationshipのバリデーション</a></li><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-following" class="heading hyperref"><span class="number">14.1.4 </span>フォローしているユーザー</a></li><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-followers" class="heading hyperref"><span class="number">14.1.5 </span>フォロワー</a></li></ul></li><li class="section"><a href="/chapters/following_users?version=5.1#sec-a_web_interface_for_following_and_followers" class="heading hyperref"><span class="number">14.2 </span>[Follow] のWebインターフェイス</a></li><li><ul><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-sample_following_data" class="heading hyperref"><span class="number">14.2.1 </span>フォローのサンプルデータ</a></li><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-stats_and_a_follow_form" class="heading hyperref"><span class="number">14.2.2 </span>統計と [Follow] フォーム</a></li><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-following_and_followers_pages" class="heading hyperref"><span class="number">14.2.3 </span>[Following] と [Followers] ページ</a></li><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-a_working_follow_button_the_standard_way" class="heading hyperref"><span class="number">14.2.4 </span>[Follow] ボタン (基本編)</a></li><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-a_working_follow_button_with_ajax" class="heading hyperref"><span class="number">14.2.5 </span>[Follow] ボタン (Ajax編)</a></li><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-following_tests" class="heading hyperref"><span class="number">14.2.6 </span>フォローをテストする</a></li></ul></li><li class="section"><a href="/chapters/following_users?version=5.1#sec-the_status_feed" class="heading hyperref"><span class="number">14.3 </span>ステータスフィード</a></li><li><ul><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-motivation_and_strategy" class="heading hyperref"><span class="number">14.3.1 </span>動機と計画</a></li><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-a_first_feed_implementation" class="heading hyperref"><span class="number">14.3.2 </span>フィードを初めて実装する</a></li><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-scopes_subselects_and_a_lambda" class="heading hyperref"><span class="number">14.3.3 </span>サブセレクト</a></li></ul></li><li class="section"><a href="/chapters/following_users?version=5.1#sec-following_conclusion" class="heading hyperref"><span class="number">14.4 </span>最後に</a></li><li><ul><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-guide_to_extensions" class="heading hyperref"><span class="number">14.4.1 </span>サンプルアプリケーションの機能を拡張する</a></li><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-guide_to_further_resources" class="heading hyperref"><span class="number">14.4.2 </span>読み物ガイド</a></li><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-following_users_what_we_learned_in_this_chapter" class="heading hyperref"><span class="number">14.4.3 </span>本章のまとめ</a></li><li class="subsection"><a href="/chapters/following_users?version=5.1#sec-afterword" class="heading hyperref"><span class="number">14.4.4 </span>訳者あとがき</a></li></ul></li></ul></li></ul></div>
+
+
+	    <div class="label" id="ebook"></div>
+<div class="special">
+  <span class="title">
+    <span class="header">電子書籍版</span>
+    <span class="description">Railsチュートリアル</span>
+  </span>
+  <a href="https://gumroad.com/l/railstutorialjp_ebook"><img src="/images/cover_ebook.png" alt="電子書籍カバーフォト" width="100%"/></a>
+  <p>
+    <a href="https://gumroad.com/l/railstutorialjp_ebook">Railsチュートリアルの電子書籍版</a>をリリースしました! 電子書籍ではEPUB版、PDF版、Dash版の３つに対応していて、すべての章がまとめて読める構成になっています。このため、全章をまとめて検索することが可能になり、２周目や３周目で要所要所を読み返してみたり、リファレンスとして適宜参照したいときに便利なフォーマットになっています。
+  </p>
+  <div class="buy-button" style="padding-bottom: 30px;">
+    <a href="https://gumroad.com/l/railstutorialjp_ebook"
+       style="color: white; text-decoration: none;"
+       target="_blank">書籍の詳細を見る</a><br />
+  </div>
+</div>
+<hr />
+
+	    <br />
+	    <!--<div class="label" id="screencast"></div>
+<div class="special">
+  <span class="title">
+    <span class="header">動画版</span>
+    <span class="description">Rails解説セミナー</span>
+  </span>
+  <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe src="//fast.wistia.net/embed/iframe/dl293tci8g?videoFoam=true" title="Wistia video player" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="100%"></iframe></div></div>
+  <script src="//fast.wistia.net/assets/external/E-v1.js" async></script>
+  <p>
+    <a href="https://coedo-rails.doorkeeper.jp/events/62596">Railsチュートリアル集中解説セミナー</a>のライブ収録動画をリリースしました! ５日間のセミナーの内容 (<b>計34時間</b>) がすべて収録されているため、解説セミナーを受講している感覚で学ぶことができます。「動画を見ながら学習したい」「２周目はキッチリと復習したい」といった方に特にオススメです。サンプル動画もいくつか用意しているのでそちらもぜひ! 😸
+  </p>
+  <div class="buy-button" style="padding-bottom: 30px;">
+    <a href="/seminars/#record" style="color: white; text-decoration: none;">動画の詳細を見る</a><br />
+  </div>
+</div>
+<hr />
+-->
+	    <br />
+	    <div class="label" id="news"></div>
+<div class="special">
+  <span class="title">
+    <span class="header">最新情報のメール購読</span>
+  </span>
+
+  <style>
+  .gumroad-follow-form-embed {
+    zoom: 1; }
+    .gumroad-follow-form-embed:before, .gumroad-follow-form-embed:after {
+      display: table;
+      line-height: 0;
+      content: ""; }
+    .gumroad-follow-form-embed:after {
+      clear: both; }
+    .gumroad-follow-form-embed * {
+      margin: 0;
+      border: 0;
+      padding: 0;
+      outline: 0;
+      box-sizing: border-box !important;
+      float: left !important; }
+    .gumroad-follow-form-embed input {
+      border-radius: 4px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      font-family: -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-right: 0;
+      color: #aaa;
+      padding: 10px;
+      box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.02);
+      background-position: top right;
+      background-repeat: no-repeat;
+      text-rendering: optimizeLegibility;
+      font-smoothing: antialiased;
+      -webkit-appearance: none;
+      -moz-appearance: caret;
+      width: 65% !important;
+      height: 40px !important; }
+    .gumroad-follow-form-embed button {
+      border-radius: 4px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+      -webkit-transition: all .05s ease-in-out;
+      transition: all .05s ease-in-out;
+      display: inline-block;
+      padding: 11px 15px 12px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 15px;
+      line-height: 100%;
+      font-family: -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: #36a9ae;
+      border: 1px solid #31989d;
+      filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#5ccfd4, endColorstr=#329ca1, GradientType=0)";
+      background: -webkit-linear-gradient(top, #5ccfd4, #329ca1);
+      background: linear-gradient(to bottom, #5ccfd4, #329ca1);
+      height: 40px !important;
+      width: 35% !important; }
+  </style>
+
+  <a href="https://gumroad.com/yasslab/follow"><img src="/images/cover_gumroad.png" alt="カバー画像" width="100%"/></a>
+  <p>
+    Railsチュートリアルの最新情報をキャッチアップしませんか? 同サイトを管理・運営している<a href="https://yasslab.jp/">YassLab (株)</a>が、更新状況やキャンペーン情報、セミナーの開催情報などをメールで配信しています。いち早く知りたい方、見逃したくない方はぜひフォローしてみてください。
+  </p>
+  <form action="https://gumroad.com/follow_from_embed_form" class="form gumroad-follow-form-embed" method="post">
+    <input name="seller_id" type="hidden" value="3254842184387">
+    <input name="email" placeholder="あなたのメールアドレス" type="email">
+    <button data-custom-highlight-color="" type="submit">フォローする</button>
+  </form>
+  <p class="align: center">参考: <a href="/images/email_sample.png">配信メールの例</a></p>
+</div>
+<hr />
+
+
+            <h2 id="contributors">協力者一覧</h2>
+<ul class='contributors'>
+  <br />
+
+  <li><p>Rails5.0対応版の翻訳者</p></li>
+  <ul style="margin-left:30px; list-style-type: none; line-height: 10px;">
+    <li>
+      <p>第1章: <em><a href="http://jp.linkedin.com/pub/shozo-hatta/11/349/930">Shozo Hatta</a></em></p>
+      <p>第2章~第14章: <em><a href="https://twitter.com/yasulab">@yasulab</a></em></p>
+      <p>レビュー: <em><a href="https://www.facebook.com/makoto.nihei.3">Makoto Nihei</a> (<a href="https://twitter.com/nihemak">@nihemak</a>)</em></p>
+    </li>
+  </ul>
+
+  <li><p>Rails4.2対応版の翻訳者</p></li>
+  <ul style="margin-left:30px; list-style-type: none; line-height: 10px;">
+    <li>
+      <p>第1章~第12章: <em>
+	  <a href="http://jp.linkedin.com/pub/shozo-hatta/11/349/930">Shozo Hatta</a>,
+	  <a href="https://twitter.com/yasulab">@yasulab</a>
+	</em>
+      </p>
+    </li>
+  </ul>
+
+  <li><p>Rails4.0対応版の翻訳者</p></li>
+  <ul style="margin-left:30px; list-style-type: none; line-height: 10px;">
+    <li>
+      <p>第1章~第11章: <em>
+	  <a href="http://jp.linkedin.com/pub/shozo-hatta/11/349/930">Shozo Hatta</a>,
+	  <a href="https://twitter.com/yasulab">@yasulab</a>
+	</em>
+      </p>
+    </li>
+  </ul>
+
+  <li><p>Rails3.2対応版の翻訳者</p></li>
+  <ul style="margin-left:30px; list-style-type: none; line-height: 10px;">
+    <li>
+      <p>第1章: <em><a href="https://twitter.com/yasulab">@yasulab</a></em></p>
+    </li>
+    <li>
+      <p>第2章: <em><a href="https://twitter.com/yasulab">@yasulab</a>, <a href="http://jp.linkedin.com/pub/shozo-hatta/11/349/930">Shozo Hatta</a></em></p>
+    </li>
+    <li>
+      <p>第3章: <em><a href="https://twitter.com/yasulab">@yasulab</a>, <a href="https://github.com/SpringMT">Makoto Haruyama</a> (<a href="https://twitter.com/Spring_MT">@Spring_MT</a>)</em></p>
+    </li>
+    <li>
+      <p>第4章: <em>Fumiaki Matsushima</em></p>
+    </li>
+    <li>
+      <p>第5章: <em><a href="https://github.com/tacahiroy">Takahiro Yoshihara</a>, Kase Hiroki, <a href="https://twitter.com/yasulab">@yasulab</a></em></p>
+    </li>
+    <li>
+      <p>第6章: <em>Hiroyuki Hayashi, <a href="http://jp.linkedin.com/pub/shozo-hatta/11/349/930">Shozo Hatta</a></em></p>
+    </li>
+    <li>
+      <p>第7章: <em><a href="http://jp.linkedin.com/pub/shozo-hatta/11/349/930">Shozo Hatta</a></em></p>
+    </li>
+    <li>
+      <p>第8章: <em>Minori Tokuda, Sakiyo Yamaoka, <a href="http://jp.linkedin.com/pub/shozo-hatta/11/349/930">Shozo Hatta</a></em></p>
+    </li>
+    <li>
+      <p>第9章: <em><a href="http://jp.linkedin.com/pub/shozo-hatta/11/349/930">Shozo Hatta</a></em></p>
+    </li>
+    <li>
+      <p>第10章: <em><a href="https://github.com/sonots">Naotoshi Seo</a> (<a href="https://twitter.com/sonots">@sonots</a>)</em></p>
+    </li>
+    <li>
+      <p>第11章: <em><a href="http://jp.linkedin.com/pub/shozo-hatta/11/349/930">Shozo Hatta</a></em></p>
+    </li>
+    <li>
+      <p>第12章: <em><a href="http://jp.linkedin.com/pub/shozo-hatta/11/349/930">Shozo Hatta</a>, <a href="https://twitter.com/yasulab">@yasulab</a></em></p>
+    </li>
+    <li>
+      <p>レビュー: <em>
+	  <a href="https://github.com/tacahiroy">Takahiro Yoshihara</a>,
+	  <a href="https://twitter.com/Amothic">@Amothic</a>,
+	  <a href="https://twitter.com/_simanman">@_simanman</a>,
+	  <a href="https://github.com/yasslab/railstutorial.jp/commits/master">et al.</a>
+	</em></p>
+    </li>
+  </ul>
+
+  <li><p>全版共通</p></li>
+  <ul style="margin-left:30px; list-style-type: none; line-height: 10px;">
+    <li>
+      <p>監訳: <em><a href="http://jp.linkedin.com/pub/shozo-hatta/11/349/930">Shozo Hatta</a>, <a href="https://twitter.com/yasulab">@yasulab</a></em></p>
+    </li>
+    <li><p>スペシャルサンクス: <em><a href="https://github.com/yamaguchih">Haruki Yamaguchi</a></em></p></li>
+    <li><p>読者対応: <em><a href="https://twitter.com/yasulab">@yasulab</a></em></p></li>
+    <li><p>リソース管理: <em><a href="https://twitter.com/yasulab">@yasulab</a></em></p></li>
+    <li><p>サイト構築: <em><a href="https://twitter.com/yasulab">@yasulab</a></em></p></li>
+    <li><p>発起人: <em><a href="https://twitter.com/yasulab">@yasulab</a></em></p></li>
+    <li style="margin-bottom: 20px">
+      <p style="margin-bottom: 10px">管理・運営: <em><a href="https://yasslab.jp/">YassLab 株式会社</a></em></p>
+      <a href="https://yasslab.jp/"
+	 target="_blank"><img src="/images/banners/yasslab_copy.png"
+			      alt="YassLab 株式会社" style="margin-left: -10px;"
+			      width="300px" /></a>
+    </li>
+    <li style="margin-bottom: 20px">
+      <p style="margin-bottom: 10px">後援: <em><a href="http://www.railscp.com/">Rails技術者認定試験</a></em></p>
+      <a href="http://www.railscp.com/"
+	 target="_blank"><img src="/images/banners/railscp_5.jpg"
+			      alt="Rails技術者認定試験ロゴ"
+			      width="200px" /></a>
+    </li>
+    <li style="margin-bottom: 20px">
+      <p style="margin-bottom: 10px">パートナー: <em><a href="/seminars#partners">Co-Edo、Nilquebe、FranLiber、他</a></em></p>
+    </li>
+  </ul>
+</ul>
+
+            <h2 id="license">ライセンス</h2>
+<p>
+  <b>原著</b><br />
+  <em>Ruby on Rails Tutorial, 4th Edition</em>.<br />
+  Copyright © 2017 by Michael Hartl.
+</p>
+
+<p>
+  <b>本書 (二次著作物)</b><br />
+  <em>Ruby on Rails チュートリアル：実例を使って Rails を学ぼう</em> (第4版) <br />
+  Copyright © 2017-2018 by <a href="https://yasslab.jp/">YassLab 株式会社</a> (代表取締役: 安川 要平) et al.<br>
+  商標取得済み: <a href="https://www.j-platpat.inpit.go.jp/web/TR/JPT_6006997/5A4B6500A41E5852B5A49379945D813B">商標公報6006997</a>
+</p>
+<p>
+  本書は<a href="#foreword">原著者から正式な許諾を得て</a>翻訳されています。<br />
+  本書を商用利用する際は<a href="/contact">お問い合わせページ</a>よりご連絡ください。<br />
+  利用許諾契約に関する必要な手続きなどについてご案内いたします。
+</p>
+
+            <div class="navigation"><a class="next_page" href="beginning?version=5.1#cha-beginning"><span class="number">第1章</span> ゼロからデプロイまで</a></div>
+
+
+          </div>
+          <div id="book_bottom"></div>
+          <div id="last-thoughts" class="announce">
+  Railsチュートリアルは，Ruby/Rails のアジャイル開発を得意とする <a href="http://yasslab.jp/ja/">YassLab</a> によって運営・保守されております.<br />
+  継続的に良いコンテンツを提供する為に，<a href="http://tatsu-zine.com/books/railstutorial">電子書籍</a>や<a href="/seminars#record">解説動画</a>のご購入を検討して頂けると幸いです m(_ _)m<br />
+  スポンサーシップや商用利用などに関するご相談がありましたら，<a href="/contact">お問い合わせ</a>ページよりお気軽にご連絡ください :)
+</div>
+
+        </div>
+
+        <div id="container-bottom"></div>
+      </div>
+    </div>
+    <div id="footer">
+  <!--<a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>-->
+</div>
+
+<div class="menu">
+  <div class='links'>
+    <div class='box' style="padding-left: 60px;">
+      <span>
+	<a href="/">ホーム</a>
+      </span>
+      <span class='division'>|</span>
+      <span>
+	<a href="/help">ヘルプ</a>
+      </span>
+      <span class='division'>|</span>
+      <span>
+	<a href="/contact">お問い合わせ</a>
+      </span>
+      <span class='division'>|</span>
+      <span>
+	<a href="/seminars">解説セミナー</a>
+      </span>
+      <span class='division'>|</span>
+      <span>
+	<a href="/#screencast">解説動画 (質問対応付き)</a>
+      </span>
+      <span class='division'>|</span>
+      <span style="padding-top:8px">
+	<a href="http://b.hatena.ne.jp/entry/railstutorial.jp/" class="hatena-bookmark-button"
+	   data-hatena-bookmark-title="Rails チュートリアル" data-hatena-bookmark-layout="simple-balloon"
+	   data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加">
+	  <img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
+	       alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" />
+	</a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+      </span>
+      <span class='division'>|</span>
+      <div class="fb-like" data-href="https://railstutorial.jp/" data-send="false"
+	   data-layout="button_count" data-show-faces="false" data-size="small"
+	   data-font="arial" style="margin-top: -5px;"></div>
+    </div>
+  </div>
+</div>
+
+
+<br />
+<br />
+<br />
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=144878509039953&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  </div>
+  <script type="text/javascript">
+    mixpanel.track_links("#index_ebook", "click ebook link@index", {
+    referrer: document.referrer
+    });
+    mixpanel.track_links("#column_ebook", "click ebook link@column", {
+    referrer: document.referrer
+    });
+  </script>
+</body>
+
+</html>
