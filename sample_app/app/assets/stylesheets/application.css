@@ -10,6 +10,11 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+
+ #app/assets/stylesheetsディレクトリ (サブディレクトリを含む) 中のすべてのCSSファイルが、アプリケーションCSSに含まれるようにしています。
+*= require_tree .
+
+#CSSの読み込みシーケンスの中で、application.css自身もその対象に含めています。
  *= require_self
+
  */
