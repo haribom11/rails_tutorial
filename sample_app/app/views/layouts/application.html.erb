@@ -7,7 +7,9 @@
                                'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application',
                                'data-turbolinks-track': 'reload' %>
-    <%= render 'layouts/shim' %>
+    <%= render 'layouts/shim'
+    #リスト 7.1: サイトのレイアウトにデバッグ情報を追加する
+    <%= debug(params) if Rails.env.development? %>
   </head>
   <body>
     <%= render 'layouts/header' %>
