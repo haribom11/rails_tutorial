@@ -1,4 +1,6 @@
-class User < ApplicationRecord
+class User <
+  #6.32: email属性を小文字に変換してメールアドレスの一意性を保証する
+   before_save { self.email = email.downcase }
   validates :name,
   presence: true,
   length: { maximum: 50 }
@@ -8,4 +10,5 @@ class User < ApplicationRecord
   length: { maximum: 255 },
   format: { with: VALID_EMAIL_REGEX },
   uniqueness: { case_sensitive: false}
+   has_secure_password
 end
