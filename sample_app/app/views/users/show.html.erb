@@ -1,8 +1,14 @@
 <!--リスト 7.4: ユーザー情報を表示するための仮のビュー -->
 <%= @user.name %>, <%= @user.email %>
-<!--リスト 7.8: ユーザー表示ビューに名前とGravatarを表示する-->
+<!--リスト 7.8: ユーザー表示ビューに名前とGravatarを表示する,リスト 7.10: ユーザーのshowビューにサイドバーを追加する-->
 <% provide(:title, @user.name) %>
-<h1>
-  <%= gravatar_for @user %>
-  <%= @user.name %>
-</h1>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
