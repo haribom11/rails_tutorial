@@ -7,15 +7,16 @@
                                'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application',
                                'data-turbolinks-track': 'reload' %>
-    <%= render 'layouts/shim'
-    #リスト 7.1: サイトのレイアウトにデバッグ情報を追加する
-    <%= debug(params) if Rails.env.development? %>
+    <%= render 'layouts/shim'%>
+    <!--リスト 7.1: サイトのレイアウトにデバッグ情報を追加する
+    下の記述をすることでデバッグ情報はRailsの3つのデフォルト環境のうち、開発環境 (development) だけで表示されるように-->
   </head>
   <body>
     <%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
       <%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %>
     </div>
   </body>
 </html>
