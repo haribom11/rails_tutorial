@@ -7,3 +7,8 @@ module UsersHelper
     image_tag(gravatar_url, alt: user.name, class: "gravatar")
   end
 end
+
+user.update_attributes(name: "Example User",
+                        email:"example@railstutorial.org",
+                        password:"foobar",
+                        password_confirmation:"foobar")
