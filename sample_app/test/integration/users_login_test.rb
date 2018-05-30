@@ -5,6 +5,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   def setup
   @user = users(:michael)
   end
+  #上のusersはfixtureのファイル名users.ymlを表し、:michaelというシンボルはリスト 8.22のユーザーを参照するためのキーを表します。
 
   test "login with invalid information" do
     get login_path
