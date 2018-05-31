@@ -22,7 +22,7 @@ module SessionsHelper
         @current_user = user
       end
     end
-  end  
+  end
 
   # 現在ログイン中のユーザーを返す (いる場合)
   def current_user
@@ -32,6 +32,14 @@ module SessionsHelper
   def logged_in?
     !current_user.nil?
   end
+
+  # 永続的セッションを破棄する
+  def forget(user)
+    user.forget
+    cookies.delete(:user_id)
+    cookies.delete(:remember_token)
+  end
+
   # 現在のユーザーをログアウトする
   def log_out
     session.delete(:user_id)
